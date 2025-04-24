@@ -22,9 +22,11 @@ index.html: report/report.qmd output/coef.csv output/fig.png
 	mv report/report.html index.html
 
 report:
-	make index.html
+	quarto render
 
 clean:
+	rm -f index.html
+	rm -rf docs
 	rm -f output/*
 	rm -f data/clean/*
 	rm -f index.html
